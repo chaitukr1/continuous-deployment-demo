@@ -4,4 +4,6 @@ jobs:
     - script: echo ./test 2
     - stage: deploy
       script: echo ./deploy target-1
-    - script: echo ./deploy target-2
+    - script: echo ./deploy target-2 
+    - stage: test
+      script: echo test3
