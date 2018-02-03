@@ -1,9 +1,7 @@
 jobs:
   include:
-    - stage: test
-      script: echo head_branch
-    - # stage name not required, will continue to use `test`
-      script: echo test2
-    - AfterSuccess:
+    - script: echo ./test 1 # uses the default stage name "test"
+    - script: echo ./test 2
     - stage: deploy
-      script: echo deploy
+      script: echo ./deploy target-1
+    - script: echo ./deploy target-2
