@@ -1,13 +1,19 @@
 jobs:
   include:
+    - stage: client
+      script: echo client
     - script: echo ./test 1 # uses the default stage name "test"
     - script: echo ./test 2
     - stage: deploy
-      script: echo ./deploy target-1
-    - script: echo ./deploy target-2 
+      script: echo ./deploy mobile
+    - script: echo ./deploy api 
     - stage: test
       script: echo test3
     - stage: test1
       script: echo different test1
     - stage: deploy
-      script: echo deploy2
+      script: echo deploy2 client
+    - stage: mobile
+      script: echo mobile step
+    - stage: api
+      script: echo api step
