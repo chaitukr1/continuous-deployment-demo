@@ -4,13 +4,13 @@ stages:
   - mobile
   - test
   - test1
-  - name: deploy
-    if: branch = master
+    after_success:
+    - deploy
 
 jobs:
   include:
     - stage: client
-      script: echo client
+      script: echoe client
     - script: echo ./test 1 # uses the default stage name "test"
     - script: echo ./test 2
     - stage: deploy
