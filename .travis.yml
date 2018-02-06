@@ -4,8 +4,7 @@ stages:
   - mobile
   - test
   - test1
-    after_success:
-    - deploy
+  - deploy
 
 jobs:
   include:
