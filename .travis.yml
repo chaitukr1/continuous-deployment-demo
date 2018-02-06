@@ -21,7 +21,7 @@ jobs:
       script: echo different test1
     - stage: deploy
       script: echo deploy2 client
-      script: echo branch
+      script: echo $TRAVIS_BRANCH
     - stage: mobile
       script: echo mobile step
     - stage: api
