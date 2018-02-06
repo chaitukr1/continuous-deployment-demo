@@ -20,8 +20,8 @@ jobs:
     - stage: test1
       script: echo different test1
     - stage: deploy
-      script: echo deploy2 client
       script: echo $TRAVIS_BRANCH
+      script: if [[ ${TRAVIS_BRANCH} != "master" ]]; then travis_terminate 0; fi
     - stage: mobile
       script: echo mobile step
     - stage: api
