@@ -1,3 +1,7 @@
+dist: trusty
+sudo: required
+group: deprecated-2017Q4
+
 stages:
   - api
   - client
