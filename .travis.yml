@@ -13,7 +13,7 @@ stages:
 jobs:
   include:
     - stage: client
-      script: echo client
+      script: echo $TRAVIS_PULL_REQUEST_BRANCH
     - script: echo ./test 1 # uses the default stage name "test"
     - script: echo ./test 2
     - stage: deploy
